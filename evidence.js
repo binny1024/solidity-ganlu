@@ -1,7 +1,7 @@
 module.exports = async function (callback) {
     try {
         let accounts = await web3.eth.getAccounts();
-
+        console.log('accounts: ', accounts);
         const Evidence = artifacts.require("Evidence");
         let instance = await Evidence.deployed();
 

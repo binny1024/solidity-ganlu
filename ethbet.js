@@ -1,7 +1,7 @@
 const BN = require("bn.js");
 const EthBet = artifacts.require("EthBet");
 
-let frac = new BN(10).pow(new BN(18));
+let frac = new BN(10).pow(new BN(18));// 1 个 ETH
 
 module.exports = async function (callback) {
 
@@ -29,7 +29,9 @@ module.exports = async function (callback) {
 
         // Send Ether to init bet
 
-        let betAmount = new BN(1).mul(frac);
+        let value = 5;//转账金额
+        let betAmount = new BN(value).mul(frac);
+
         response = await instance.send(betAmount, {from: accounts[0]});
 
         console.log("Transaction hash: " + response.tx);
