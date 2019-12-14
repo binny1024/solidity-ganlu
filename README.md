@@ -18,13 +18,19 @@
     ```
     truffle compile
     ```
-   
+   带参数 `--all`
+   ```
+    truffle compile --all
+   ```
 5. Run migrations
 
     ```
     truffle migrate
     ```
-   
+   带参数 `--reset`
+   ```
+   truffle migrate
+   ```
 6. Run a demo script
 
     ```
