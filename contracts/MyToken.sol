@@ -4,9 +4,9 @@ import "./ERC20.sol";
 
 contract MyToken is ERC20 {
 
-    string  public name     = 'MyToken';
+    string  public name     = 'TTToken';
     uint8   public decimals = 18;
-    string  public symbol   = 'MYT';
+    string  public symbol   = 'TTT';
     string  public version  = '1.0.0';
 
     constructor () public {

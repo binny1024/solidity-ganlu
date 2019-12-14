@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.0;
 
 import "./SafeMath.sol";
 //批量转账
@@ -7,7 +7,7 @@ contract BatchTransferETH {
         minter = msg.sender;
     }
 
-    function batchTransfer(byte32[] addresses, uint amount) public {
+    function batchTransfer(address[] addresses, uint amount) public {
         //获取合约中的余额,address 类型可以直接取余额
         uint256 betAmount = address(this).balance;
 

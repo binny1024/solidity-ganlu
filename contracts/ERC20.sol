@@ -31,8 +31,10 @@ import "./SafeMath.sol";
 contract ERC20 is Context, IERC20 {
     using SafeMath for uint256;
 
+    //核心状态
     mapping (address => uint256) private _balances;
 
+    //一对多映射
     mapping (address => mapping (address => uint256)) private _allowances;
 
     uint256 private _totalSupply;
@@ -66,6 +68,7 @@ contract ERC20 is Context, IERC20 {
 
     /**
      * @dev See {IERC20-allowance}.
+     *
      */
     function allowance(address owner, address spender) public view returns (uint256) {
         return _allowances[owner][spender];
@@ -73,7 +76,7 @@ contract ERC20 is Context, IERC20 {
 
     /**
      * @dev See {IERC20-approve}.
-     *
+     * 授权转账
      * Requirements:
      *
      * - `spender` cannot be the zero address.
