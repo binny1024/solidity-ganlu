@@ -1,4 +1,4 @@
-//监听代币交易事件
+//获取所有区块信息
 
 module.exports = async (callback) => {
     try {
