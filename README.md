@@ -1,5 +1,7 @@
 ### Solidity Course
 
+ssh://git@git.dev.yuanben.org:7999/com/solidity-course.git
+
 1. Install and start [Ganache](https://www.trufflesuite.com/ganache) as a local Ethereum test node.
 2. Install truffle
 
