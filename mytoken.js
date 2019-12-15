@@ -8,7 +8,7 @@ module.exports = async function (callback) {
 
     // Get the deployed instance of our token contract
     let instance = await MyToken.deployed();
-    console.log("Contract instance address: " + instance.address);
+    console.log("Contract instance address: " + instance);
 
     // Get token name
     let name = await instance.getName();
@@ -39,9 +39,10 @@ module.exports = async function (callback) {
 
     // Send a transaction to transfer 15 tokens from account 0 to account 1
 
-    let value = 150000;
+    let value = 100;
     let amount = frac.mul(new BN(value));
     let response = await instance.transfer(accounts[1], amount, {from: accounts[0]});
+    // let response = await instance.transfer(accounts[0], amount, {from: accounts[1]});
 
     console.log("Transaction hash: " + response.tx);
     console.log("After transferring:");

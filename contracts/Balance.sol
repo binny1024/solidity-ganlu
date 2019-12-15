@@ -8,12 +8,12 @@ contract Balance {
         return t;
     }
 
-    function transfer(address from_address, address to_address, uint256 amount) public returns (bool){
-        require(from_address != address(0), "ERC20: transfer from the zero address");
-        require(to_address != address(0), "ERC20: transfer to the zero address");
-
-        from_address.thisadddre
-        return true;
-    }
+//    function transfer(address from_address, address to_address, uint256 amount) public returns (bool){
+//        require(from_address != address(0), "ERC20: transfer from the zero address");
+//        require(to_address != address(0), "ERC20: transfer to the zero address");
+//
+//        from_address.thisadddre
+//        return true;
+//    }
 
 }

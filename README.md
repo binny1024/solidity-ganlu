@@ -29,10 +29,17 @@
     ```
    带参数 `--reset`
    ```
-   truffle migrate
+   truffle migrate --reset
    ```
-6. Run a demo script
+   重新部署,就是发一个新的合约,旧的合约还在链上
+6. Run a demo script,执行合约调用
 
     ```
     truffle exec mytoken.js
     ```
+   
+  7. 获取所有的账户
+   ```javascript
+    let accounts = await web3.eth.getAccounts();
+   ```
+   
