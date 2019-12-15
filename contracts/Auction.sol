@@ -13,7 +13,7 @@ contract Auction {
     uint public highestBid;
     uint public nftokenId;
 
-    // 为完成的退款记录
+    // 未完成的退款记录
     mapping(address => uint) pendingReturns;
 
     // 竞拍结束后设置为true，不允许任何后续修改
