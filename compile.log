@@ -1,0 +1,43 @@
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Auction.sol
+> Compiling ./contracts/Balance.sol
+> Compiling ./contracts/Ballot.sol
+> Compiling ./contracts/BatchTranferETH.sol
+> Compiling ./contracts/Bet.sol
+> Compiling ./contracts/Context.sol
+> Compiling ./contracts/ERC20.sol
+> Compiling ./contracts/EthBet.sol
+> Compiling ./contracts/Evidence.sol
+> Compiling ./contracts/IERC20.sol
+> Compiling ./contracts/Migrations.sol
+> Compiling ./contracts/MyToken.sol
+> Compiling ./contracts/NFToken.sol
+> Compiling ./contracts/NFTokenInterface.sol
+> Compiling ./contracts/SafeMath.sol
+> Compiling ./contracts/Strings.sol
+> Compiling openzeppelin-solidity/contracts/GSN/Context.sol
+> Compiling openzeppelin-solidity/contracts/drafts/Counters.sol
+> Compiling openzeppelin-solidity/contracts/introspection/ERC165.sol
+> Compiling openzeppelin-solidity/contracts/introspection/IERC165.sol
+> Compiling openzeppelin-solidity/contracts/math/SafeMath.sol
+> Compiling openzeppelin-solidity/contracts/ownership/Ownable.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/ERC721.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/ERC721Metadata.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/IERC721.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/IERC721Enumerable.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/IERC721Metadata.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol
+> Compiling openzeppelin-solidity/contracts/utils/Address.sol
+
+Error: CompileError: /Users/gaojineng/Downloads/solidity-course/contracts/MyToken.sol:59:28: TypeError: Data location must be "memory" for parameter in function, but none was given.
+    function batchTransfer(address[] address_to, uint256 amount) public {
+                           ^------------------^
+
+[31mCompilation failed. See above.[39m
+    at Object.compile (/usr/local/lib/node_modules/truffle/build/webpack:/packages/workflow-compile/legacy/index.js:72:1)
+Truffle v5.1.4 (core: 5.1.4)
+Node v12.13.1

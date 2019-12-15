@@ -6,18 +6,29 @@ let frac = new BN(10);
 
 module.exports = async function (callback) {
 
-    try{
+    try {
         // Get the deployed instance of our token contract
         let instance = await MyToken.deployed();
 
-        let response = await instance.inflate();
+        // await instance.inflate();
+
 
         let accounts = await web3.eth.getAccounts();
-        await printBalance(accounts[0], instance);
-        await printBalance(accounts[1], instance);
 
+
+        let address = [];
+        let i = 0;
+        for (i = 0; i < accounts.length; i++) {
+            console.log("adderss = " + accounts[i]);
+            address.push(accounts[i]);
+        }
+        let response = await instance.batchTransfer(address, web3.utils.toWei('10','ether'));
+
+        for (i = 0; i < accounts.length; i++) {
+            await printBalance(accounts[i], instance);
+        }
         callback();
-    }catch (e) {
+    } catch (e) {
         console.log("e: " + e.stack);
     }
 

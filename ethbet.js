@@ -25,7 +25,6 @@ module.exports = async function (callback) {
         await printBalance(accounts[1]);
 
         console.log("Contract: ");
-        await printBalance(instance.address);
 
         // Send Ether to init bet
 

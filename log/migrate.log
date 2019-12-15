@@ -1,0 +1,283 @@
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/MyToken.sol
+
+Error: CompileError: /Users/gaojineng/Downloads/solidity-course/contracts/MyToken.sol:25:9: TypeError: "send" and "transfer" are only available for objects of type "address payable", not "address".
+        creator.transfer(msg.value);
+        ^--------------^
+
+[31mCompilation failed. See above.[39m
+    at Object.compile (/usr/local/lib/node_modules/truffle/build/webpack:/packages/workflow-compile/legacy/index.js:72:1)
+Truffle v5.1.4 (core: 5.1.4)
+Node v12.13.1
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/MyToken.sol
+
+Error: CompileError: /Users/gaojineng/Downloads/solidity-course/contracts/MyToken.sol:25:9: TypeError: "send" and "transfer" are only available for objects of type "address payable", not "address".
+        creator.transfer(msg.value);
+        ^--------------^
+
+[31mCompilation failed. See above.[39m
+    at Object.compile (/usr/local/lib/node_modules/truffle/build/webpack:/packages/workflow-compile/legacy/index.js:72:1)
+Truffle v5.1.4 (core: 5.1.4)
+Node v12.13.1
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/MyToken.sol
+> Artifacts written to /Users/gaojineng/Downloads/solidity-course/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.12+commit.7709ece9.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 0x6691b7
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xd8ae60cd0f72dd866e351b2f93d8c9dd406887b27ff3afa8aa870b89d2f0f1a2
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x36f1f91C303F505114E4c74BCc1779E4DC1C9Cf7
+   > block number:        273
+   > block timestamp:     1576388580
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.50829016
+   > gas used:            263741
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00527482 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00527482 ETH
+
+
+2_deploy_my_token.js
+====================
+
+   Replacing 'MyToken'
+   -------------------
+   > transaction hash:    0x9cf50a4239ea48ae7de9b245283609e5f8ef708cfeed5993754569c7b35d0248
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x571536f63A8261090FCd045557DC0f64DBC01f0B
+   > block number:        275
+   > block timestamp:     1576388580
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.4650001
+   > gas used:            2122480
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0424496 ETH
+
+
+   Replacing 'NFToken'
+   -------------------
+   > transaction hash:    0xabfaf8deffdefe3c3a351c9b9e0375e7630dd2d547d0ae2a66a8ad2d170d4581
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xfCE3B240c0d5B77a8601896D136F9B37AA97464d
+   > block number:        276
+   > block timestamp:     1576388580
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.3975244
+   > gas used:            3373785
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0674757 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.1099253 ETH
+
+
+3_deploy_ballot.js
+==================
+
+   Replacing 'Ballot'
+   ------------------
+   > transaction hash:    0xac985b3bf5ee3646f3bbb489dcea9326224c1bf668eb5663e866acd9b9b10aaf
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x4E6eC37ccC3F97BE51270c46EBe0974cCB68B0FA
+   > block number:        278
+   > block timestamp:     1576388581
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.37706304
+   > gas used:            996045
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0199209 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0199209 ETH
+
+
+4_deploy_evidence.js
+====================
+
+   Replacing 'Evidence'
+   --------------------
+   > transaction hash:    0x7dad2d2ab3a785a8e28727b994b57e3074a2c1222d7c1e41472ba8df85c39bcf
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xC46fCff17a00a0D73972a9CBACD5abC5AAB33C17
+   > block number:        280
+   > block timestamp:     1576388582
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.3657439
+   > gas used:            538934
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01077868 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01077868 ETH
+
+
+5_deploy_action.js
+==================
+
+   Replacing 'Auction'
+   -------------------
+   > transaction hash:    0x369632e7f50847f94043db7779a6baa92229be49802e16f464a1326cd5c9a5f8
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xbcF0902492d962548fe2b173C440437A98eCBABD
+   > block number:        283
+   > block timestamp:     1576388582
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.34406064
+   > gas used:            878576
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01757152 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01757152 ETH
+
+
+6_deploy_balance.js
+===================
+
+   Replacing 'Balance'
+   -------------------
+   > transaction hash:    0x29317194a78a459c7db187404d631646dd0a87297a501cb94a4f9e0a87c1a447
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xE3c6EBBAe9D56f5e51F7050aE40CbC3708493B2A
+   > block number:        286
+   > block timestamp:     1576388583
+   > account:             0x8EBdae952223DA3D03050D4d6F28E4c58B391cdb
+   > balance:             999999999999999.98558376
+   > gas used:            100251
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00200502 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00200502 ETH
+
+
+9021_deploy_bet.js
+==================
+
+   Replacing 'Bet'
+   ---------------
+   > transaction hash:    0x236b37a6f79866ab5d20061c42c98926ce8d913f194f3f484372528822e04834
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x0D4966ffbcAF267776F53CC347D1DeB35b51c87e
+   > block number:        288
+   > block timestamp:     1576388583
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.3333046
+   > gas used:            437718
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00875436 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00875436 ETH
+
+
+9022_deploy_ethbet.js
+=====================
+
+   Replacing 'EthBet'
+   ------------------
+   > transaction hash:    0xb92cc61c7e23bd61ea5fff1d75367ba292c91f97562cdfb9bfd174e12b02a4e2
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x6FD1AA6C0c157fBBcfCF77AB651ad7232782936C
+   > block number:        290
+   > block timestamp:     1576388584
+   > account:             0x71b853c37c1EE58bbd83147482e5cf2bdF04586E
+   > balance:             999999999999997.32941984
+   > gas used:            167151
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00334302 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00334302 ETH
+
+
+Summary
+=======
+> Total deployments:   9
+> Final cost:          0.17757362 ETH
+
+
+--------add payable----
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/MyToken.sol
+
+Error: CompileError: /Users/gaojineng/Downloads/solidity-course/contracts/MyToken.sol:59:28: TypeError: Data location must be "memory" for parameter in function, but none was given.
+    function batchTransfer(address[] address_to, uint256 amount) public {
+                           ^------------------^
+
+[31mCompilation failed. See above.[39m
+    at Object.compile (/usr/local/lib/node_modules/truffle/build/webpack:/packages/workflow-compile/legacy/index.js:72:1)
+Truffle v5.1.4 (core: 5.1.4)
+Node v12.13.1
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/MyToken.sol
+
+Error: CompileError: /Users/gaojineng/Downloads/solidity-course/contracts/MyToken.sol:62:33: DeclarationError: Undeclared identifier.
+        for (uint256 i = 0; i < length; i++) {
+                                ^----^
+
+[31mCompilation failed. See above.[39m
+    at Object.compile (/usr/local/lib/node_modules/truffle/build/webpack:/packages/workflow-compile/legacy/index.js:72:1)
+Truffle v5.1.4 (core: 5.1.4)
+Node v12.13.1

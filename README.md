@@ -31,6 +31,10 @@
    ```
    truffle migrate --reset
    ```
+   输出到文件
+   ```
+    sudo truffle migrate --reset >> ./log/migrate.log && echo "--------add payable----" >>./log/migrate.log 
+   ```
    重新部署,就是发一个新的合约,旧的合约还在链上
 6. Run a demo script,执行合约调用
 
