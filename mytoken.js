@@ -39,7 +39,8 @@ module.exports = async function (callback) {
 
     // Send a transaction to transfer 15 tokens from account 0 to account 1
 
-    let amount = frac.mul(new BN(15));
+    let value = 150000;
+    let amount = frac.mul(new BN(value));
     let response = await instance.transfer(accounts[1], amount, {from: accounts[0]});
 
     console.log("Transaction hash: " + response.tx);

@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 import "./ERC20.sol";
-
+//发币
 contract MyToken is ERC20 {
 
     string  public name     = 'TTToken';
