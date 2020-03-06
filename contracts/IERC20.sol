@@ -7,11 +7,14 @@ pragma solidity ^0.5.0;
 interface IERC20 {
     /**
      * @dev Returns the amount of tokens in existence.
+     * 当前的代币总量，可以通过这个函数来获取。所有智能合约发行的代币总量是一定的，
+     * totalSupply必须设置初始值。如果不设置初始值，这个代币发行就说明有问题。
      */
     function totalSupply() external view returns (uint256);
 
     /**
      * @dev Returns the amount of tokens owned by `account`.
+     * 输入地址，可以获取该地址代币的余额。
      */
     function balanceOf(address account) external view returns (uint256);
 

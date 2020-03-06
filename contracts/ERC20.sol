@@ -29,14 +29,18 @@ import "./SafeMath.sol";
  * allowances. See {IERC20-approve}.
  */
 contract ERC20 is Context, IERC20 {
+
+    // 让 uint256 这个类型的变量可以使用 SafeMath 库中的函数
     using SafeMath for uint256;
 
-    //核心状态
-    mapping (address => uint256) private _balances;
+    // 账户的余额,维护着所有的账户
+    mapping(address => uint256) private _balances;
 
-    //一对多映射
-    mapping (address => mapping (address => uint256)) private _allowances;
+    // 一对多映射,合约地址,账户地址,账户余额
+    // 查看 合约地址 当前可消费账户地址的余额
+    mapping(address => mapping(address => uint256)) private _allowances;
 
+    // 代币总量
     uint256 private _totalSupply;
 
     /**
@@ -62,7 +66,7 @@ contract ERC20 is Context, IERC20 {
      * - the caller must have a balance of at least `amount`.
      */
     function transfer(address recipient, uint256 amount) public returns (bool) {
-        _transfer(_msgSender(), recipient, amount);
+        _transferToken(_msgSender(), recipient, amount);
         return true;
     }
 
@@ -99,7 +103,7 @@ contract ERC20 is Context, IERC20 {
      * `amount`.
      */
     function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {
-        _transfer(sender, recipient, amount);
+        _transferToken(sender, recipient, amount);
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
         return true;
     }
@@ -154,7 +158,10 @@ contract ERC20 is Context, IERC20 {
      * - `recipient` cannot be the zero address.
      * - `sender` must have a balance of at least `amount`.
      */
-    function _transfer(address sender, address recipient, uint256 amount) internal {
+
+
+    // 发起 从 sender 到 recipient 的转账
+    function _transferToken(address sender, address recipient, uint256 amount) internal {
         require(sender != address(0), "ERC20: transfer from the zero address");
         require(recipient != address(0), "ERC20: transfer to the zero address");
 
@@ -169,14 +176,22 @@ contract ERC20 is Context, IERC20 {
      * Emits a {Transfer} event with `from` set to the zero address.
      *
      * Requirements
-     *
-     * - `to` cannot be the zero address.
+     *           - `to` cannot be the zero address.
      */
+
+    /**
+    * 用户生成新的token
+    */
     function _mint(address account, uint256 amount) internal {
         require(account != address(0), "ERC20: mint to the zero address");
 
+        // 总账户增加 amount
         _totalSupply = _totalSupply.add(amount);
+
+        // 某账户增加 amount
         _balances[account] = _balances[account].add(amount);
+
+        // 相当于回调某一个函数
         emit Transfer(address(0), account, amount);
     }
 
